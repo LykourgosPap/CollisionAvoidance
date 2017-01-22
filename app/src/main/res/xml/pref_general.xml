@@ -1,0 +1,44 @@
+
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:key="TH"
+        android:title="Thresholds">
+        <ListPreference
+            android:key="LS"
+            android:persistent="true"
+            android:title="Light Sensor"
+            android:entries="@array/LightT"
+            android:entryValues="@array/LightT"
+            android:defaultValue="100" />
+        <ListPreference
+            android:key="PS"
+            android:persistent="true"
+            android:title="Proximity Sensor"
+            android:entries="@array/ProximityT"
+            android:entryValues="@array/ProximityT"
+            android:defaultValue="1" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="RR"
+        android:title="Refresh Rate">
+        <ListPreference
+            android:defaultValue="5"
+            android:entries="@array/Seconds"
+            android:entryValues="@array/Seconds"
+            android:key="LR"
+            android:persistent="true"
+            android:title="Light Refresh" />
+        <ListPreference
+            android:defaultValue="5"
+            android:entries="@array/Seconds"
+            android:entryValues="@array/Seconds"
+            android:key="PR"
+            android:persistent="true"
+            android:title="Proximity Refresh" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
+
+
