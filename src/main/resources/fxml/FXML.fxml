@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="anap.FXMLController">
+   <children>
+      <TabPane layoutX="30.0" layoutY="14.0" prefHeight="400.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Database">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="Rid" layoutX="553.0" layoutY="35.0" mnemonicParsing="false" onAction="#SearchOnDb" text="Refresh" />
+                        <TextField fx:id="textProximity" layoutX="101.0" layoutY="35.0" prefHeight="25.0" prefWidth="75.0" />
+                        <TextField fx:id="textDeviceId" layoutX="14.0" layoutY="35.0" prefHeight="25.0" prefWidth="75.0" />
+                        <TextField fx:id="textLight" layoutX="200.0" layoutY="35.0" prefHeight="25.0" prefWidth="75.0" />
+                        <TextField fx:id="textLatitude" layoutX="286.0" layoutY="35.0" prefHeight="25.0" prefWidth="75.0" />
+                        <TextField fx:id="textLongitude" layoutX="372.0" layoutY="35.0" prefHeight="25.0" prefWidth="75.0" />
+                        <Label layoutX="26.0" layoutY="14.0" text="Device ID" />
+                        <Label layoutX="94.0" layoutY="14.0" text="Proximity Sensor" />
+                        <Label layoutX="205.0" layoutY="14.0" text="Light Sensor" />
+                        <Label layoutX="302.0" layoutY="14.0" text="Latitude" />
+                        <Label layoutX="383.0" layoutY="14.0" text="Longitude" />
+                        <TableView fx:id="tableUser" layoutX="1.0" layoutY="66.0" prefHeight="305.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="66.0">
+                          <columns>
+                            <TableColumn fx:id="columnDeviceId" prefWidth="44.0" text="Device ID" />
+                              <TableColumn fx:id="columnTime" prefWidth="75.0" text="Time" />
+                            <TableColumn fx:id="columnProximity" prefWidth="199.0" text="Proximity Sensor" />
+                              <TableColumn fx:id="columnLight" minWidth="0.0" prefWidth="40.0" text="Light Sensor" />
+                              <TableColumn fx:id="columnLatitude" prefWidth="40.0" text="Latitude" />
+                              <TableColumn fx:id="columnLongitude" prefWidth="110.0" text="Longitude" />
+                              <TableColumn fx:id="columnDeviceId2" prefWidth="75.0" text="Device ID #2" />
+                              <TableColumn fx:id="columnTime2" prefWidth="75.0" text="Time #2" />
+                              <TableColumn fx:id="columnProximity2" prefWidth="75.0" text="Proximity Sensor #2" />
+                              <TableColumn fx:id="columnLight2" prefWidth="75.0" text="Light Sensor #2" />
+                              <TableColumn fx:id="columnLatitude2" prefWidth="75.0" text="Latitude #2" />
+                              <TableColumn fx:id="columnLongitude2" prefWidth="75.0" text="Longitude #2" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <Button fx:id="Sid" layoutX="621.0" layoutY="35.0" mnemonicParsing="false" onAction="#SearchSpecific" text="Search" />
+                        <TextField fx:id="textTime" layoutX="462.0" layoutY="35.0" prefHeight="25.0" prefWidth="75.0" />
+                        <Label layoutX="487.0" layoutY="14.0" text="Time" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Settings">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ChoiceBox fx:id="ProxT" layoutX="207.0" layoutY="84.0" prefWidth="150.0" />
+                        <Label layoutX="14.0" layoutY="88.0" text="Proximity Sensor Threshold:" />
+                        <Label layoutX="14.0" layoutY="200.0" text="Light Sensor Threshold:" />
+                        <ChoiceBox fx:id="LightT" layoutX="207.0" layoutY="196.0" prefWidth="150.0" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,30 @@
+package anap;
+
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.stage.Stage;
+
+public class Main extends Application {
+
+    @Override
+    public void start(Stage stage) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/FXML.fxml"));
+
+        Scene scene = new Scene(root);
+
+        stage.setScene(scene);
+        stage.setTitle("Collision Avoidance");
+        stage.getIcons().add(new Image("Images/ic_launcher.png"));
+        stage.show();
+        Thread subscribe = new Thread() {
+            @Override
+            public void run() {
+                Subscribe.sub();
+            }
+        };
+        subscribe.start();
+    }
+}
