@@ -22,7 +22,7 @@ public	class	Subscribe	implements	MqttCallback {
         public static void sub(String dID) {
             String topic = dID;
             int qos = 2;
-            String broker = "tcp://192.168.1.8:1883";
+            String broker = "tcp://"+Online_Activity.MQTT_IP+":1883";
             String clientId = dID;
             MemoryPersistence persistence = new MemoryPersistence();
             try {
